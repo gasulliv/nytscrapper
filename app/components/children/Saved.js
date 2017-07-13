@@ -15,7 +15,7 @@ class Results extends React.Component {
         <div className="panel-body text-center">
 
           <h1>Address:</h1>
-          <p>{this.props.address}</p>
+          <p>{this.props.articles}</p>
 
         </div>
       </div>

@@ -35,11 +35,10 @@ class Form extends React.Component {
           <h3 className="panel-title text-center">Query</h3>
         </div>
         <div className="panel-body text-center">
-
           <form onSubmit={this.handleSubmit}>
             <div className="form-group">
               <h4 className="">
-                <strong>Location</strong>
+                <strong>Search</strong>
               </h4>
 
               {/*
@@ -47,6 +46,24 @@ class Form extends React.Component {
                 This is not necessary but it is convenient.
                 Also note how each has an onChange event associated with our handleChange event.
               */}
+              <input
+                type="text"
+                className="form-control text-center"
+                id="term"
+                value={this.state.term}
+                onChange={this.handleChange}
+                required
+              />
+              <br />
+              <input
+                type="text"
+                className="form-control text-center"
+                id="term"
+                value={this.state.term}
+                onChange={this.handleChange}
+                required
+              />
+              <br />
               <input
                 type="text"
                 className="form-control text-center"
@@ -68,8 +85,21 @@ class Form extends React.Component {
           </form>
         </div>
       </div>
+
+      <div className="panel panel-default">
+        <div className="panel-heading">
+          <h3 className="panel-title text-center">Results</h3>
+        </div>
+        <div className="panel-body text-center">
+
+          <h1>Articles:</h1>
+          <p>{this.props.articles}</p>
+
+        </div>
+      </div>
     );
   }
 }
+
 
 export default Form;
